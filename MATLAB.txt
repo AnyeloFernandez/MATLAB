@@ -1,0 +1,72 @@
+clc
+clear all, 
+close all, 
+disp( 'Ejercicio de aplicacion:')
+
+
+disp('En un sistema resorte-masa libre no amortiguado oscila ')
+disp('con periodo de 3s.Cuando se eliminan 8 libras del resorte,')
+disp('el sistematiene entonces un periodo de2s. ¿Qu´e peso tenía')
+disp('originalmente la masa en el resorte?Zill et al., 2002]')
+
+disp('----------------------------------------------------------')
+
+disp('Ecuacion de movimientos arm´onicos amortiguados forzados.')
+
+disp('mx"+cx''+kx =  f(x)')
+%el sistema dice que es no amortiguado libre entonces no hay fuerzas y 
+% donde no hay fuerza de restituci´on no hay fuerzas de amortiguamiento
+ disp  (' m*x" + k*x = 0')
+ %ecuacion diferencial lineal homogenea 
+disp('   ')
+disp('Si se pasa a dividir m en ambos miembros se tien')
+disp(' x" + (k/m)*x = 0  ')
+disp(' En terminos f´ısicos (la frecuencia al cuadrado) ')
+
+disp('w^2==k/m ')
+disp('  De manera que ')
+disp('  x" w^2*x = 0')
+disp('  la frecuencia tambien es igual a :')
+
+disp(' w= (2* pi) /T')
+disp('  ///////////////////////////////////////////////////////// ')
+
+disp(' La masa en terminos de sumatoria de fuerzas ')
+
+ 
+disp('m =W/g')
+ 
+disp(' m=frecuencia   ,  M = peso')
+disp(' remplazando ')
+
+ % DATOS 
+T1=2
+
+
+
+ 
+T2=3
+ syms x y W1 W2
+
+W1=W1
+W2=8-W1
+ sqrt(W1)/T1==sqrt(W2)/T2
+  
+ disp(' EVALUANDO ')
+sqrt(W1)/T1==sqrt(W2)/T2,W1
+ 
+
+ 
+2/3==sqrt(W1-8)/sqrt(W1)
+ 
+
+ 
+solve(2/3 == (W1 - 8)^(1/2)/W1^(1/2),W1)
+ 
+disp('RESULTADO DE M1 O PESO DE LA MASA INICIAL')
+ 
+72/5
+
+
+disp('¿Qu´e peso tenía originalmente la masa en el resorte?')
+disp(' EL PESO QUE TENIA LA MASA ORIGINALMETE ERA de 14.40 libras.')
